@@ -1,0 +1,98 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: #ebebeb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.product-container {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  width: 300px;
+  background: #fff;
+  border-radius: 28px;
+  overflow: visible;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+/* Theme Toggle Button */
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: #161616;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+  z-index: 9999;
+}
+
+#theme-toggle:hover {
+  opacity: 0.8;
+}
+
+/* -------- DARK MODE -------- */
+.dark-mode {
+  background: #111 !important;
+  color: #eee !important;
+}
+
+.dark-mode .product-card {
+  background: #1b1b1b;
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.05);
+}
+
+.dark-mode .product-description {
+  color: #ddd;
+}
+
+.dark-mode .buy-button {
+  background: #333;
+  color: #fff;
+}
+
+.dark-mode .heart-icon {
+  background: #2c2c2c;
+  border-color: #444;
+}
+
+.dark-mode .floating-cart {
+  background: #1b1b1b !important; /* same color as card */
+  border: 1px solid #2a2a2a; /* subtle border */
+  color: #eaeaea; /* light icon */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+  transition: 0.25s ease;
+}
+.dark-mode .floating-cart:hover {
+  background: #222;
+  transform: scale(1.06);
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.8);
+}
+
+.dark-mode .badge {
+  background: #067c0a;
+}
+.dark-mode .card-two::after {
+  background: #111 !important;
+}
+.dark-mode .product-image {
+  background: linear-gradient(
+    180deg,
+    #111 0%,
+    #1a1a1a 32%,
+    #222 52%,
+    #262626 80%,
+    #2a2a2a 100%
+  );
+}
