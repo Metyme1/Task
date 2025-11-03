@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PR2 Clone</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Flowbite CDN -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- POPPINS FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Poppins", sans-serif !important;
+      }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+    <script>
+      fetch("components/navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar").innerHTML = data;
+        });
+    </script>
+  </head>
+
+  <body class="font-sans bg-[#FAFAFA]">
+    <div id="navbar"></div>
+    <div w3-include-html="components/hero.html"></div>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script>
+      w3.includeHTML();
+    </script>
+
+    <div w3-include-html="components/brand.html"></div>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script>
+      w3.includeHTML();
+    </script>
+
+    <div w3-include-html="components/featuresplit.html"></div>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script>
+      w3.includeHTML();
+    </script>
+
+    <div w3-include-html="components/feature.html"></div>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script>
+      w3.includeHTML();
+    </script>
+    <div w3-include-html="components/feature.html"></div>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script>
+      w3.includeHTML();
+    </script>
+
+    <div w3-include-html="components/que.html"></div>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script>
+      w3.includeHTML();
+    </script>
+
+    <div w3-include-html="components/testmony.html"></div>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script>
+      w3.includeHTML();
+    </script>
+
+    <div w3-include-html="components/price.html"></div>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script>
+      w3.includeHTML();
+    </script>
+
+    <div w3-include-html="components/faq.html"></div>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script>
+      w3.includeHTML();
+    </script>
+
+    <div w3-include-html="components/footer.html"></div>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script>
+      w3.includeHTML();
+    </script>
+  </body>
+</html>
