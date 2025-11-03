@@ -1,0 +1,49 @@
+/* CARD TWO SPECIAL SHAPE */
+.card-two {
+  position: relative;
+  width: 300px;
+  background: #fff;
+  border-radius: 30px;
+  overflow: visible;
+  padding-bottom: 60px; /* give room for bite */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* Carved bite bottom-right */
+.card-two::after {
+  content: "";
+  position: absolute;
+  bottom: -35px;
+  right: -35px;
+  width: 130px;
+  height: 130px;
+  background: #ebebeb; /* match page bg */
+  border-top-left-radius: 120px;
+  z-index: 1;
+}
+
+/* Content above */
+.card-two .product-image,
+.card-two .product-details {
+  position: relative;
+  z-index: 5;
+}
+
+/* Floating cart bubble */
+.card-two .floating-cart {
+  position: absolute;
+  bottom: -10px;
+  right: 10px;
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.12);
+  z-index: 10;
+  cursor: pointer;
+  transition: 0.2s;
+}
