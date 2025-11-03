@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Account</title>
+    <link rel="stylesheet" href="form.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="wave"></div>
+
+      <!-- LEFT SIDE -->
+      <div class="left-box">
+        <img
+          src="https://www.allen.ac.in/apps2526/assets/images/reset-password.jpg"
+          width="120"
+        />
+        <h1>Welcome</h1>
+        <p>Lorem ipsum placeholder text for previewing visual mockups.</p>
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div class="right-box">
+        <h2>Create your account</h2>
+        <p class="subtitle">Join us today – it takes just a few moments</p>
+
+        <form id="registerForm">
+          <!-- NAME -->
+          <label>Name</label>
+          <div class="input-group">
+            <input id="firstName" type="text" placeholder="Enter your name" />
+            <span class="error"></span>
+          </div>
+
+          <!-- PHONE -->
+          <label>Phone Number</label>
+          <div class="input-group phone-box">
+            <span class="prefix">+251</span>
+            <input id="phone" type="text" placeholder="912 345 678" />
+            <span class="error"></span>
+          </div>
+
+          <!-- EMAIL -->
+          <label>Email Address</label>
+          <div class="input-group">
+            <input id="email" type="email" placeholder="example@mail.com" />
+            <span class="error"></span>
+          </div>
+
+          <!-- PASSWORD -->
+          <label>Password</label>
+          <div class="input-group password-box">
+            <input id="password" type="password" placeholder="Enter password" />
+            <span class="toggle">
+              <img src="https://img.icons8.com/ios/24/000000/visible.png" />
+            </span>
+            <span class="error"></span>
+          </div>
+          <small class="helper"
+            >Use 8 or more characters with a mix of letters, numbers &
+            symbols</small
+          >
+
+          <!-- CONFIRM PASSWORD -->
+          <label>Confirm Password</label>
+          <div class="input-group password-box">
+            <input
+              id="confirmPassword"
+              type="password"
+              placeholder="Re-type password"
+            />
+            <span class="toggle">
+              <img src="https://img.icons8.com/ios/24/000000/visible.png" />
+            </span>
+            <span class="error"></span>
+          </div>
+
+          <!-- BUTTON -->
+          <button type="submit">Create Account</button>
+        </form>
+
+        <h4 id="successMsg"></h4>
+      </div>
+    </div>
+
+    <!-- BRAND FOOTER -->
+    <div class="brand">
+      <img
+        src="https://cdn.iconscout.com/icon/free/png-256/free-paypal-52-432525.png"
+        width="28"
+      />
+      <span>Brand</span>
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

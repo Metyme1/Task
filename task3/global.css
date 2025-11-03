@@ -6,6 +6,10 @@ body {
   align-items: center;
   min-height: 100vh;
 }
+.invalid {
+  border: 1.5px solid #d1002c !important;
+  background: #fff4f6;
+}
 
 .product-container {
   display: flex;

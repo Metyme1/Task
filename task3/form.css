@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #ffff;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 200px;
+  background: url("data:image/svg+xml,%3Csvg width='1440' height='320' viewBox='0 0 1440 320' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23ffffff' fill-opacity='1' d='M0,64L24,74.7C48,85,96,107,144,106.7C192,107,240,85,288,106.7C336,128,384,192,432,213.3C480,235,528,213,576,181.3C624,149,672,107,720,90.7C768,75,816,85,864,112C912,139,960,181,1008,181.3C1056,181,1104,139,1152,144C1200,149,1248,203,1296,202.7C1344,203,1392,149,1416,122.7L1440,96L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+  background-size: cover;
+  z-index: 0;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  bottom: -140px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220%;
+  height: 420px;
+  background: #ffffff;
+  border-radius: 50% / 35%;
+  z-index: 0;
+  pointer-events: none !important;
+}
+
+.wrapper {
+  width: 980px;
+  height: 700px;
+  background: #fffffffa;
+  border-radius: 26px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0px 12px 50px rgba(0, 0, 0, 0.12);
+  animation: fadeIn 0.55s ease;
+}
+.wrapper,
+.right-box,
+form,
+button {
+  position: relative;
+  z-index: 10 !important;
+}
+
+/* LEFT SECTION */
+.left-box {
+  flex: 1.1;
+  background: linear-gradient(180deg, #dbe8ff, #bcd4ff);
+  padding: 55px 40px;
+  text-align: center;
+}
+
+.left-box img {
+  margin-top: 35px;
+  width: 180px;
+}
+
+.left-box h1 {
+  margin-top: 25px;
+  font-size: 36px;
+  font-weight: 600;
+  color: #2a3143;
+}
+
+.left-box p {
+  margin-top: 15px;
+  color: #596176;
+  width: 78%;
+  margin: auto;
+  font-size: 14px;
+  line-height: 23px;
+}
+
+/* RIGHT SECTION */
+.right-box {
+  flex: 1.2;
+  padding: 60px 65px;
+  background: #ffffff;
+}
+
+.right-box h2 {
+  font-size: 27px;
+  font-weight: 700;
+  margin-bottom: 3px;
+  color: #18263b;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #7c8598;
+  margin-bottom: 28px;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.error {
+  font-size: 12px;
+  color: #d63031;
+  margin-top: -6px;
+  margin-bottom: 8px;
+}
+
+form input {
+  width: 100%;
+  padding: 13px;
+  border-radius: 8px;
+  border: 1px solid #d9d9d9;
+  font-size: 14px;
+  margin-bottom: 14px;
+  background: #ffffff;
+  transition: 0.25s;
+}
+
+form input:focus {
+  outline: none;
+  border-color: #5d82ff;
+  box-shadow: 0 0 0 3px rgba(77, 129, 255, 0.25);
+}
+.phone-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.phone-box .prefix {
+  position: absolute;
+  left: 14px;
+  color: #687086;
+  font-size: 14px;
+  font-weight: 500;
+  pointer-events: none;
+}
+
+.phone-box input {
+  width: 100%;
+  padding-left: 55px; /* space so text doesn't overlap +251 */
+  padding-right: 10px;
+  height: 45px;
+  border-radius: 10px;
+  border: 1px solid #d7d7d7;
+  font-size: 14px;
+  transition: 0.25s;
+}
+
+.phone-box input:focus {
+  border-color: #4d81ff;
+  box-shadow: 0 0 0 3px rgba(77, 129, 255, 0.22);
+  outline: none;
+}
+
+/* Name Row */
+.row {
+  display: flex;
+  gap: 12px;
+}
+/* Labels */
+form label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1c274a;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Helper text */
+.helper {
+  display: block;
+  font-size: 12px;
+  color: #8189a5;
+  margin-top: -6px;
+  margin-bottom: 10px;
+}
+
+/* Password eye icon wrapper */
+.password-box {
+  position: relative;
+}
+
+.password-box input {
+  width: 100%;
+}
+
+.password-box .toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  opacity: 0.5;
+  transition: 0.2s;
+}
+
+.password-box .toggle:hover {
+  opacity: 1;
+}
+/* BUTTON */
+button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(90deg, #6a87ff, #4a63ff);
+  color: #fff;
+  border: none;
+  font-size: 15.5px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.25s ease;
+  pointer-events: auto !important;
+}
+
+button:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 5px 10px rgba(78, 103, 255, 0.25);
+}
+
+/* SIGN IN */
+.signin {
+  margin-top: 18px;
+  font-size: 13px;
+  color: #636b81;
+  text-align: center;
+}
+
+.signin a {
+  color: #4a65ff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.signin a:hover {
+  text-decoration: underline;
+}
+
+/* Brand footer */
+.brand {
+  position: absolute;
+  bottom: 16px;
+  left: 25px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #0c254d;
+  z-index: 99;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
