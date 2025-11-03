@@ -1,0 +1,24 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: #ebebeb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.product-container {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  width: 300px;
+  background: #fff;
+  border-radius: 28px;
+  overflow: visible;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}

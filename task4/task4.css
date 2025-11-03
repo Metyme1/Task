@@ -1,0 +1,138 @@
+body {
+  background: #0d0d0d;
+  font-family: "Poppins", sans-serif;
+  color: #f5f5f5;
+  text-align: center;
+  padding: 40px;
+}
+
+.title {
+  margin-bottom: 32px;
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+
+/* Container */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  justify-content: center;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Modern Card */
+.card {
+  width: 300px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 18px;
+  border-radius: 22px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  transition: 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 10px 30px rgba(50, 140, 255, 0.25);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 14px;
+  margin-bottom: 12px;
+  height: 165px;
+  object-fit: cover;
+}
+
+.card h2 {
+  font-size: 19px;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+/* Description text */
+.card p {
+  font-size: 14px;
+  opacity: 0.75;
+  line-height: 1.5;
+  height: 48px;
+  overflow: hidden;
+  transition: 0.25s;
+}
+
+.card p:hover {
+  overflow: visible;
+  position: absolute;
+  padding: 8px;
+  background: #101010;
+  opacity: 1;
+  z-index: 99;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.pagination button {
+  padding: 10px 18px;
+  border: none;
+  background: linear-gradient(135deg, #6284ff, #00d2ff);
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.pagination button:hover {
+  transform: scale(1.08);
+  opacity: 0.85;
+}
+
+#page-indicator {
+  font-size: 16px;
+  font-weight: 600;
+  opacity: 0.8;
+}
+@media (max-width: 500px) {
+  .product-container > div {
+    width: calc(50% - 14px);
+  }
+
+  .product-image {
+    height: 180px;
+    padding: 15px;
+  }
+
+  .product-details {
+    padding: 12px;
+  }
+
+  .product-title {
+    font-size: 13px;
+  }
+
+  .product-description {
+    font-size: 10px;
+    height: 30px;
+    overflow: hidden;
+  }
+
+  .buy-button {
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+}
