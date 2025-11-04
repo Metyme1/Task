@@ -73,6 +73,7 @@ body {
   max-width: 300px;
 }
 .product-container-1 {
+  height: 500px;
   display: flex;
   justify-content: center;
 }

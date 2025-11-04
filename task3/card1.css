@@ -58,46 +58,6 @@ body {
   border-radius: 20px;
 }
 
-.heart-icon {
-  position: absolute;
-  top: 18px;
-  right: 20px;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: #ffffff;
-  border: 2px solid;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: 0.25s ease;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
-}
-
-.heart-icon i {
-  font-size: 20px;
-  color: #ff3b5c;
-}
-
-.heart-icon i::before {
-  content: "\2665";
-}
-
-/* Favorited State */
-.heart-icon.active {
-  background: #ff3b5c;
-  border-color: #ff3b5c;
-}
-
-.heart-icon.active i {
-  color: #fff;
-}
-
-.heart-icon.active i::before {
-  content: "\2665";
-}
-
 .product-details {
   padding: 18px;
 }

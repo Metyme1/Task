@@ -1,32 +1,16 @@
+/* ------------------ Base Layout ------------------ */
 body {
   font-family: "Poppins", sans-serif;
   background: #ebebeb;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 40px;
   min-height: 100vh;
 }
-.invalid {
-  border: 1.5px solid #d1002c !important;
-  background: #fff4f6;
-}
 
-.product-container {
-  display: flex;
-  gap: 25px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.product-card {
-  width: 300px;
-  background: #fff;
-  border-radius: 28px;
-  overflow: visible;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  transition: 0.3s ease;
-}
-
+/* ------------------ Toggle Button ------------------ */
 #theme-toggle {
   position: fixed;
   top: 20px;
@@ -46,6 +30,130 @@ body {
   opacity: 0.8;
 }
 
+/* ------------------ Product Card Shared ------------------ */
+.product-card {
+  width: 100%;
+  max-width: 300px;
+  background: #fff;
+  border-radius: 28px;
+  overflow: visible;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.product-image .heart-icon {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+}
+
+/* ------------------ Heart Icon ------------------ */
+.heart-icon {
+  width: 32px;
+  height: 32px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.25s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+  position: relative;
+}
+
+.heart-icon i::before {
+  content: "\2665";
+  color: #ff3b5c;
+  font-size: 18px;
+}
+
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-two .heart-icon {
+  position: static !important;
+}
+
+.heart-icon.active {
+  background: #ff3b5c;
+}
+
+.heart-icon.active i::before {
+  color: white;
+}
+
+/* ------------------ Container Wrappers ------------------ */
+.product-container-1,
+.product-container-2 {
+  width: 100%;
+  max-width: 300px;
+}
+
+.product-container-1 {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Scoop background container */
+.product-container-2 {
+  position: relative;
+  background: #ebebeb;
+  border-bottom-right-radius: 120px;
+  overflow: hidden;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Cards in row on desktop */
+.cards-row {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* ------------------ Floating Cart ------------------ */
+.product-container-2 .floating-cart {
+  position: absolute;
+  bottom: -22px;
+  right: -22px;
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* ------------------ Typography ------------------ */
+.product-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.product-description {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.product-price {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* ------------------ DARK MODE ------------------ */
 .dark-mode {
   background: #111 !important;
   color: #eee !important;
@@ -71,24 +179,24 @@ body {
 }
 
 .dark-mode .floating-cart {
-  background: #1b1b1b !important; /* same color as card */
-  border: 1px solid #2a2a2a; /* subtle border */
-  color: #eaeaea; /* light icon */
+  background: #1b1b1b !important;
+  border: 1px solid #2a2a2a;
+  color: #eaeaea;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
-  transition: 0.25s ease;
 }
+
 .dark-mode .floating-cart:hover {
   background: #222;
   transform: scale(1.06);
-  box-shadow: 0 0 14px rgba(0, 0, 0, 0.8);
 }
 
 .dark-mode .badge {
   background: #067c0a;
 }
-.dark-mode .card-two::after {
+.dark-mode .product-container-2 {
   background: #111 !important;
 }
+
 .dark-mode .product-image {
   background: linear-gradient(
     180deg,
@@ -98,4 +206,76 @@ body {
     #262626 80%,
     #2a2a2a 100%
   );
+}
+
+/* ------------------ RESPONSIVE ------------------ */
+
+/* Tablet/Mobile */
+@media (max-width: 768px) {
+  .cards-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-card {
+    max-width: 90%;
+  }
+
+  .product-title {
+    font-size: 18px;
+  }
+
+  .product-price {
+    font-size: 16px;
+  }
+
+  .floating-cart {
+    right: -15px;
+    bottom: -15px;
+  }
+
+  .product-container-2 {
+    max-width: 340px;
+  }
+}
+
+/* Smaller phones */
+@media (max-width: 600px) {
+  .product-title {
+    font-size: 16px;
+  }
+
+  .product-description {
+    font-size: 12px;
+  }
+
+  .product-price {
+    font-size: 15px;
+  }
+
+  .product-details {
+    padding: 12px;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 420px) {
+  .product-title {
+    font-size: 15px;
+  }
+
+  .product-description {
+    font-size: 11px;
+  }
+
+  .product-price {
+    font-size: 14px;
+  }
+
+  .floating-cart {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+    bottom: 35px;
+  }
 }

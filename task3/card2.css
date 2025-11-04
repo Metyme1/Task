@@ -1,58 +1,69 @@
+/* Card-two base styling */
 .card-two {
   position: relative;
   width: 300px;
   background: #fff;
   border-radius: 30px;
-  overflow: visible;
-  padding-bottom: 60px;
+  padding-bottom: 20px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  overflow: hidden; /* keep card tidy */
 }
 
-.card-two::after {
-  content: "";
-  position: absolute;
-  bottom: -35px;
-  right: -35px;
-  width: 130px;
-  height: 130px;
-  background: #ebebeb;
-  border-top-left-radius: 120px;
-  z-index: 1;
+/* Remove old curve hacks */
+.card-two::after,
+.card-two::before {
+  display: none;
 }
 
+/* Keep content above background */
 .card-two .product-image,
 .card-two .product-details {
   position: relative;
   z-index: 5;
 }
-
-.card-two .floating-cart {
+.floating-cart {
   position: absolute;
-  bottom: -10px;
-  right: 10px;
   width: 60px;
-  height: 60px;
-  background: white;
-  border-radius: 25px;
+  height: 90px;
+  background: #fff;
+  border-radius: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 26px;
-  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.12);
-  z-index: 10;
-  cursor: pointer;
-  transition: 0.2s;
+  font-size: 32px;
+  bottom: 60px;
+  right: 0px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+  z-index: 9999; /* now works */
 }
-.floating-cart.added {
-  background: #4caf50;
-  color: #fff;
-  transform: scale(1.1);
-}
-
-.floating-cart {
-  transition: 0.25s;
+.wrapper {
+  position: relative;
+  width: 300px; /* same width as card */
+  margin-bottom: 120px; /* space for the scoop */
 }
 
+.product-container-2 .floating-cart:hover {
+  transform: translateY(-4px);
+}
+
+/* Hover scale effect remains */
 .floating-cart.added:hover {
   transform: scale(1.15);
+}
+.product-container-2 {
+  width: 300px;
+  background: #ebebeb;
+  position: relative;
+  padding-bottom: 60px;
+  overflow: hidden;
+
+  /* The magic scoop cut */
+  clip-path: path(
+    "M 0 0 H 300 V400  C 150 380 330 510 120 550 C 60 570 0 500 0 580 Z"
+  );
+}
+
+.product-container-1 {
+  width: 300px;
+  position: relative;
 }
