@@ -1,8 +1,9 @@
-// ================================
-// ❤️ FAVORITE BUTTON LOGIC
-// ================================
 const heartButtons = document.querySelectorAll(".heart-icon");
 let favoriteCount = 0;
+// Close button click
+document.getElementById("closeModal").addEventListener("click", () => {
+  document.getElementById("successModal").classList.remove("show");
+});
 
 heartButtons.forEach((heart) => {
   heart.addEventListener("click", () => {
@@ -24,9 +25,6 @@ heartButtons.forEach((heart) => {
   });
 });
 
-// ================================
-// 🌙 THEME TOGGLE BUTTON
-// ================================
 const toggleBtn = document.getElementById("theme-toggle");
 
 if (toggleBtn) {
@@ -38,9 +36,6 @@ if (toggleBtn) {
   });
 }
 
-// ================================
-// 🛒 Floating cart route
-// ================================
 const cartButtons = document.querySelectorAll(".floating-cart");
 
 cartButtons.forEach((btn) => {
@@ -53,11 +48,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("registerForm");
   const successMsg = document.getElementById("successMsg");
 
-  if (!form) return; // safety for other pages
+  if (!form) return;
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-    console.log("FORM SUBMITTED ✅");
 
     const first = document.getElementById("firstName");
     const phone = document.getElementById("phone");
@@ -74,49 +68,72 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let valid = true;
 
-    // NAME
     if (first.value.trim() === "") {
       first.nextElementSibling.textContent = "Name is required";
       first.classList.add("invalid");
       valid = false;
     }
 
-    // PHONE (Ethiopian)
-    const phoneRegex = /^9\d{8}$/;
-    if (!phoneRegex.test(phone.value.trim())) {
-      phone.parentElement.nextElementSibling.textContent =
-        "Enter valid phone (9XXXXXXXX)";
+    const phoneRegex = /^(9\d{8}|07\d{8})$/;
+    const phoneError = phone.closest(".input-group").querySelector(".error");
+
+    if (phone.value.trim() === "") {
+      phoneError.textContent = "Phone number is required";
       phone.classList.add("invalid");
       valid = false;
+    } else {
+      const phoneRegex = /^(9\d{8}|7\d{8})$/;
+      if (!phoneRegex.test(phone.value.trim())) {
+        phoneError.textContent = "Enter valid phone (9XXXXXXXX or 07XXXXXXXX)";
+        phone.classList.add("invalid");
+        valid = false;
+      }
     }
 
-    // EMAIL
     const emailRegex = /^\S+@\S+\.\S+$/;
-    if (!emailRegex.test(email.value.trim())) {
-      email.nextElementSibling.textContent = "Invalid email format";
+    if (email.value.trim() === "") {
+      email.nextElementSibling.textContent = "Email is required";
       email.classList.add("invalid");
       valid = false;
+    } else {
+      const emailRegex = /^\S+@\S+\.\S+$/;
+      if (!emailRegex.test(email.value.trim())) {
+        email.nextElementSibling.textContent = "Invalid email format";
+        email.classList.add("invalid");
+        valid = false;
+      }
     }
 
-    // PASSWORD
-    if (pass.value.length < 8) {
-      pass.parentElement.nextElementSibling.textContent =
+    if (pass.value.trim() === "") {
+      pass.closest(".input-group").querySelector(".error").textContent =
+        "Password is required";
+
+      pass.classList.add("invalid");
+      valid = false;
+    } else if (pass.value.length < 8) {
+      pass.closest(".input-group").querySelector(".error").textContent =
         "Minimum 8 characters required";
+
       pass.classList.add("invalid");
       valid = false;
     }
 
-    // CONFIRM PASSWORD
-    if (pass.value !== confirm.value) {
-      confirm.parentElement.nextElementSibling.textContent =
+    if (confirm.value.trim() === "") {
+      confirm.closest(".input-group").querySelector(".error").textContent =
+        "Confirm your password";
+
+      confirm.classList.add("invalid");
+      valid = false;
+    } else if (pass.value !== confirm.value) {
+      confirm.closest(".input-group").querySelector(".error").textContent =
         "Passwords do not match";
+
       confirm.classList.add("invalid");
       valid = false;
     }
-
     if (valid) {
-      successMsg.textContent = "✅ Account created successfully!";
       form.reset();
+      document.getElementById("successModal").classList.add("show");
     }
   });
 });
