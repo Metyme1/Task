@@ -36,7 +36,6 @@ function createCard(post) {
     </div>`;
 }
 
-// Render cards
 function renderCards() {
   const container = document.getElementById("card-container");
   container.innerHTML = "";
