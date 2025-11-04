@@ -2,23 +2,151 @@ body {
   font-family: "Poppins", sans-serif;
   background: #ebebeb;
   display: flex;
+  flex-direction: column; /* stack them vertically */
   justify-content: center;
   align-items: center;
+  gap: 40px; /* space between cards */
   min-height: 100vh;
 }
 
-.product-container {
-  display: flex;
-  gap: 25px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
+/* REMOVE old .product-container flex rules COMPLETELY */
 
+/* Shared card style */
 .product-card {
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   background: #fff;
   border-radius: 28px;
+
   overflow: visible;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   transition: 0.3s ease;
+}
+
+.product-image .heart-icon {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+}
+
+/* Shared Heart Style */
+.heart-icon {
+  width: 32px;
+  height: 32px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.25s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+  position: relative;
+}
+
+.heart-icon i::before {
+  content: "\2665";
+  color: #ff3b5c;
+  font-size: 18px;
+}
+
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-two .heart-icon {
+  position: static !important;
+}
+
+.heart-icon.active {
+  background: #ff3b5c;
+}
+
+.heart-icon.active i::before {
+  color: white;
+}
+.product-container-1,
+.product-container-2 {
+  width: 100%;
+  max-width: 300px;
+}
+.product-container-1 {
+  display: flex;
+  justify-content: center;
+}
+
+.product-container-2 {
+  position: relative;
+  background: #ebebeb;
+  border-bottom-right-radius: 120px;
+  overflow: hidden;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ✅ Floating cart anchored to clipped wrapper */
+.product-container-2 .floating-cart {
+  position: absolute;
+  bottom: -22px;
+  right: -22px;
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  z-index: 10;
+}
+.cards-row {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap; /* ← important */
+}
+
+/* Default desktop sizes */
+.product-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.product-description {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.product-price {
+  font-size: 18px;
+  font-weight: 700;
+}
+@media (max-width: 768px) {
+  .product-card {
+    max-width: 90%; /* Make cards slightly narrower on mobile */
+  }
+
+  .product-title {
+    font-size: 18px; /* Adjust font size */
+  }
+
+  .product-price {
+    font-size: 16px; /* Adjust font size */
+  }
+
+  .floating-cart {
+    right: -15px; /* Adjust position */
+    bottom: -15px; /* Adjust position */
+  }
+
+  .cards-row {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center cards */
+  }
 }

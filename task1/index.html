@@ -6,7 +6,6 @@
     <title>Task 1</title>
 
     <link rel="stylesheet" href="global.css" />
-
     <link rel="stylesheet" href="card1.css" />
     <link rel="stylesheet" href="card2.css" />
 
@@ -17,53 +16,58 @@
   </head>
 
   <body>
-    <div class="product-container">
-      <div class="product-card card-one">
-        <div class="product-image">
-          <span class="badge">Trending</span>
-          <div class="heart-icon">
-            <i class="heart-shape"></i>
+    <div class="cards-row">
+      <div class="product-container-1">
+        <div class="product-card card-one">
+          <div class="product-image">
+            <span class="badge">Trending</span>
+            <div class="heart-icon"><i></i></div>
+            <img src="shoe.png" alt="Product Image" />
           </div>
-          <img src="shoe.png" alt="Product Image" />
-        </div>
 
-        <div class="product-details">
-          <h2 class="product-title">Nike Running Shoes</h2>
-          <p class="product-description">
-            Lightweight, durable, and built for peak performance every step of
-            the way.
-          </p>
+          <div class="product-details">
+            <h2 class="product-title">Nike Running Shoes</h2>
+            <p class="product-description">
+              Lightweight, durable, and built for peak performance every step of
+              the way.
+            </p>
 
-          <div class="bottom-row">
-            <div class="product-price">$59.99</div>
-            <button class="buy-button">Add to Cart</button>
+            <div class="bottom-row">
+              <div class="product-price">$59.99</div>
+              <button class="buy-button">Add to Cart</button>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="product-card card-two">
-        <div class="product-image">
-          <span class="badge">Trending</span>
-          <div class="heart-icon" data-fav="false">❤</div>
+      <div class="wrapper">
+        <div class="product-container-2">
+          <div class="product-card card-two">
+            <div class="product-image">
+              <span class="badge">Trending</span>
+              <img src="shoe.png" alt="Product Image" />
+            </div>
 
-          <img src="shoe.png" />
-        </div>
+            <div class="product-details">
+              <div class="title-row">
+                <h2 class="product-title">Nike Running Shoes</h2>
+                <div class="heart-icon"><i></i></div>
+              </div>
 
-        <div class="product-details">
-          <h2 class="product-title">Nike Running Shoes</h2>
-          <p class="product-description">
-            Lightweight, durable, and built for peak performance every step of
-            the way.
-          </p>
-          <div class="bottom-row">
-            <div class="product-price">$59.99</div>
+              <p class="product-description">
+                Lightweight, durable, and built for peak performance every step
+                of the way.
+              </p>
+
+              <div class="bottom-row">
+                <div class="product-price">$59.99</div>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="floating-cart" data-added="false">🛒</div>
+        <div class="floating-cart">🛒</div>
       </div>
     </div>
-
     <script src="script.js"></script>
   </body>
 </html>

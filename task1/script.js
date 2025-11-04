@@ -3,22 +3,23 @@ let favoriteCount = 0;
 
 heartButtons.forEach((heart) => {
   heart.addEventListener("click", () => {
-    const liked = heart.getAttribute("data-fav") === "true";
+    // Check active status
+    const liked = heart.classList.contains("active");
 
     if (!liked) {
+      // Add favorite
       heart.classList.add("active");
-      heart.setAttribute("data-fav", "true");
-      heart.textContent = "❤️";
       favoriteCount++;
+      heart.setAttribute("data-fav", "true");
 
-      console.log("Added to favorites");
+      console.log("Added to favorites", favoriteCount);
     } else {
+      // Remove favorite
       heart.classList.remove("active");
-      heart.setAttribute("data-fav", "false");
-      heart.textContent = "❤";
       favoriteCount--;
+      heart.setAttribute("data-fav", "false");
 
-      console.log("Removed from favorites");
+      console.log("Removed from favorites", favoriteCount);
     }
   });
 });
@@ -47,5 +48,13 @@ cartButtons.forEach((btn) => {
 
       console.log("Item removed from cart");
     }
+  });
+});
+const buyButtons = document.querySelectorAll(".buy-button");
+
+buyButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    cartCount++;
+    console.log("Item added to cart (buy button)", cartCount);
   });
 });
