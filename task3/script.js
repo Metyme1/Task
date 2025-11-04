@@ -1,26 +1,33 @@
 const heartButtons = document.querySelectorAll(".heart-icon");
 let favoriteCount = 0;
-// Close button click
-document.getElementById("closeModal").addEventListener("click", () => {
-  document.getElementById("successModal").classList.remove("show");
-});
+const closeModalBtn = document.getElementById("closeModal");
+const successModal = document.getElementById("successModal");
+
+if (closeModalBtn && successModal) {
+  closeModalBtn.addEventListener("click", () => {
+    successModal.classList.remove("show");
+  });
+}
 
 heartButtons.forEach((heart) => {
   heart.addEventListener("click", () => {
-    const liked = heart.getAttribute("data-fav") === "true";
+    // Check active status
+    const liked = heart.classList.contains("active");
 
     if (!liked) {
+      // Add favorite
       heart.classList.add("active");
-      heart.setAttribute("data-fav", "true");
-      heart.textContent = "❤️";
       favoriteCount++;
-      console.log("Added to favorites");
+      heart.setAttribute("data-fav", "true");
+
+      console.log("Added to favorites", favoriteCount);
     } else {
+      // Remove favorite
       heart.classList.remove("active");
-      heart.setAttribute("data-fav", "false");
-      heart.textContent = "❤";
       favoriteCount--;
-      console.log("Removed from favorites");
+      heart.setAttribute("data-fav", "false");
+
+      console.log("Removed from favorites", favoriteCount);
     }
   });
 });
