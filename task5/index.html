@@ -59,16 +59,18 @@
           ></div>
         </div>
 
-        <nav class="relative z-20 flex items-center justify-between px-20 py-6">
-          <a href="#" class="text-2xl font-extrabold text-[#14A3DD]">
-            Bali Tour
-          </a>
+        <nav
+          class="relative z-20 flex items-center justify-between px-6 lg:px-20 py-6"
+        >
+          <a href="#" class="text-2xl font-extrabold text-[#14A3DD]"
+            >Bali Tour</a
+          >
 
           <ul
-            class="flex items-center gap-8 text-sm text-slate-600 font-medium mr-auto ml-20"
+            class="hidden lg:flex items-center gap-10 text-sm text-slate-600 font-medium mx-auto ml-24"
           >
             <li
-              class="flex items-center gap-1 cursor-pointer hover:text-slate-900"
+              class="flex items-center gap-1 cursor-pointer hover:text-[#14A3DD]"
             >
               Ticket
               <svg
@@ -83,10 +85,10 @@
               </svg>
             </li>
 
-            <li class="hover:text-slate-900">Events</li>
+            <li class="hover:text-[#14A3DD]">Events</li>
 
             <li
-              class="flex items-center gap-1 cursor-pointer hover:text-slate-900"
+              class="flex items-center gap-1 cursor-pointer hover:text-[#14A3DD]"
             >
               Explore
               <svg
@@ -101,30 +103,23 @@
               </svg>
             </li>
 
-            <li class="hover:text-slate-900">Activity</li>
-            <li class="hover:text-slate-900">Blog</li>
+            <li class="hover:text-[#14A3DD]">Activity</li>
+            <li class="hover:text-[#14A3DD]">Blog</li>
           </ul>
 
-          <div class="flex items-center gap-4">
+          <div class="hidden lg:flex items-center gap-5">
             <div
-              class="flex items-center gap-1 text-sm cursor-pointer text-slate-600 hover:text-slate-900 text-white hover:text-white"
+              class="flex items-center gap-1 text-sm cursor-pointer text-slate-600 hover:text-[#14A3DD]"
             >
-              <img src="https://flagcdn.com/w20/gb.png" class="w-4 h-4" />
+              <img
+                src="https://flagcdn.com/w20/gb.png"
+                class="w-4 h-4 rounded-sm"
+              />
               ENG
-              <svg
-                class="w-3 h-3 mt-[1px]"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"
-                />
-              </svg>
             </div>
 
             <button
-              class="px-5 py-2 bg-white rounded-full shadow-md flex items-center gap-2 border border-slate-200 hover:shadow-lg transition"
+              class="px-5 py-2 bg-white rounded-full shadow-md flex items-center gap-2 border border-slate-200 hover:shadow-lg hover:-translate-y-[2px] transition"
             >
               <svg
                 class="w-4 h-4 text-[#0A89D3]"
@@ -140,9 +135,9 @@
             </button>
           </div>
 
-          <button class="md:hidden p-2">
+          <button id="menuBtn" class="lg:hidden p-2">
             <svg
-              class="w-6 h-6 text-slate-700"
+              class="w-7 h-7 text-slate-700"
               fill="none"
               stroke-width="2"
               viewBox="0 0 24 24"
@@ -152,13 +147,40 @@
           </button>
         </nav>
 
-        <section
-          class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-6 items-center px-14 pt-2 pb-24"
+        <div
+          id="mobileMenu"
+          class="hidden flex flex-col gap-4 bg-white shadow-md rounded-xl mx-4 mt-4 p-5 text-slate-700 font-medium lg:hidden"
         >
-          <div class="py-6 md:py-10">
-            <div class="relative inline-block">
+          <a class="block py-1 hover:text-[#14A3DD]">Ticket</a>
+          <a class="block py-1 hover:text-[#14A3DD]">Events</a>
+          <a class="block py-1 hover:text-[#14A3DD]">Explore</a>
+          <a class="block py-1 hover:text-[#14A3DD]">Activity</a>
+          <a class="block py-1 hover:text-[#14A3DD]">Blog</a>
+
+          <button
+            class="w-full mt-2 px-5 py-3 bg-white rounded-full shadow-md flex items-center justify-center gap-2 border border-slate-200 hover:shadow-lg transition"
+          >
+            <svg
+              class="w-4 h-4 text-[#0A89D3]"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <circle cx="12" cy="7" r="4" />
+              <path d="M6 21v-1a6 6 0 0112 0v1" />
+            </svg>
+            <span class="text-sm font-medium text-slate-600">Login</span>
+          </button>
+        </div>
+
+        <section
+          class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center px-4 sm:px-8 lg:px-14 pt-6 pb-24 min-h-[70vh]"
+        >
+          <div class="py-4 sm:py-8 md:py-10 text-center lg:text-left">
+            <div class="relative inline-block w-fit mx-auto lg:mx-0">
               <h1
-                class="text-5xl sm:text-6xl font-extrabold leading-tight text-slate-900"
+                class="text-[2.1rem] sm:text-4xl md:text-5xl lg:text-6xl xl:text-[4rem] font-extrabold leading-[1.05] text-slate-900"
               >
                 <span class="bali-outline">ENJOY</span>
                 <span class="text-[#10A4DE]"> YOUR</span><br />
@@ -168,73 +190,74 @@
 
               <img
                 src="a1.png"
-                class="absolute -top-6 left-[90px] w-12 rotate-[-5deg] pointer-events-none"
+                class="absolute -top-8 left-[40%] sm:left-[60px] md:left-[120px] lg:left-[160px] xl:left-[200px] w-8 sm:w-10 md:w-12 rotate-[-5deg] pointer-events-none select-none"
               />
 
               <img
                 src="a2.png"
-                class="absolute top-[95px] left-[160px] w-10 rotate-[4deg] pointer-events-none"
+                class="absolute top-[65px] left-[55%] sm:left-[100px] md:left-[200px] lg:left-[240px] xl:left-[280px] w-6 sm:w-8 md:w-10 rotate-[4deg] pointer-events-none select-none"
               />
             </div>
 
-            <div class="relative mt-8 flex items-center gap-4">
+            <div
+              class="relative mt-8 flex justify-center lg:justify-start items-center"
+            >
               <a
                 href="#"
-                class="inline-flex items-center justify-center px-7 py-3 rounded-full font-semibold text-white bg-gradient-to-b from-[#FFD84B] to-[#F5C007] shadow-[0_10px_20px_rgba(245,192,7,0.35)] hover:shadow-[0_12px_25px_rgba(245,192,7,0.45)] transition-transform duration-200 hover:-translate-y-0.5"
+                class="inline-flex items-center justify-center px-7 py-3 rounded-full font-semibold text-white bg-gradient-to-b from-[#FFD84B] to-[#F5C007] shadow-[0_10px_20px_rgba(245,192,7,0.35)] hover:shadow-[0_12px_25px_rgba(245,192,7,0.45)] transition duration-200 hover:-translate-y-0.5"
               >
                 Buy Ticket Now
               </a>
 
               <img
                 src="https://img.freepik.com/premium-vector/handdrawn-curved-arrow-left_850574-565.jpg"
-                class="absolute left-[300px] -top-[50px] w-24 opacity-90 rotate-50deg]"
+                class="block absolute sm:block absolute -right-4 -top-12 md:-right-1 md:-top-14 lg:left-[400px] lg:-top-[55px] w-12 sm:w-10 md:w-20 opacity-90 pointer-events-none select-none"
               />
             </div>
 
-            <div class="mt-20">
-              <p class="text-xs tracking-widest text-slate-400">PARTNER</p>
+            <div class="mt-14 sm:mt-20">
+              <p
+                class="text-xs tracking-widest text-slate-400 text-center lg:text-left"
+              >
+                PARTNER
+              </p>
 
-              <div class="mt-6 flex items-center gap-14">
-                <div class="flex items-center gap-2 opacity-70">
-                  <img
-                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAAt1BMVEX///8zMzMrskwpKSkuLi4hISEVFRWIiIgYGBjm5uYmsUn5+vkvLy8ArDW2t7ZfX19rbWwmJiZxcXFiwXZWV1YQEBCDh4QAAAC/wcAdHR0ar0Lq8+zs7eynqagKCQq+4sXl8Oc8tVjLzMu03byenp56e3qPkI/HyMfw+fLa29ro6OhCRENXvm3y8/Lf7+Kk2a5PT0/O6NM5OjlJuGJxxYOVlpagoqHE4sma1aZ7x4pkvXdGSEd2x4eRrQ+SAAAJKklEQVR4nO2baXuaShSAISyiIIqVKFZMrlVTYmmTtKbb/f+/67LMgVkFtyfJzXk/pYzAzMssZ5ZqGoIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIKchHt7+9JZeGXcfOlnfLh56Xy8Hj5/7/euMnr9759fOi+vhI+zwkhhpffxpXPzKqCUoJQSRglKyblllaAUoZagFEktQSlSJe9bikLJe5aiVPJ+pexR8l6l7FXyPqUISmaz9y5FUNL/9q1/mpTE3202u+d4eYHsJuvrkqXmk7/W8zO/Q1Ryo2k3J0hJO4FjBYYRBPb6zHnNmYZGQehrnaj8c9I97yukSk6RMrUDnWBcnzev5fOt8uFW5sQo/7TP60Sh5Hgp8ULX37YTpZJjpSSUkrfpZI8STftxzCx5bL5xJ3uVuP/wQUsLKd0QfFhOFE0u0sde1MmBSjIpsyYpMcmwHty52QiUni2vNRd1crCSFjXl2qgyfCku6eQIJc01ZQS5PHcUVXNBJ0cpaawpQ9LFOu55cinhck6OVNJUUyonQkraTZKu2pSbJSfKypWn3pO/ZU7uVTcewtFK1FL8acbYI11s8S+fOEjjoRnajmPb241sCrTcbJ0s2bGNYSxq6262dn6zNSg6KYmTIJ6W+Gyn3vXJ5TbzrhOUKKVMrAyvGopzJsWHv18vLIhaPMN5mvIydceA+0xrcc2Waz4MAw8SA1/qRI+skgnbta9t6eXzK1H1KVVkUlP0tLvQYC569oCuC8k28pj0wKGl+ezd2axS4sQcEefmgMlSBMourkRRU+RO3LElXDbMuv37C09ID3dV8op/qrVeik6ipQO30pVsSZy0CKeblTRakUmROnG3hnhZNwPIOj1jpO4DKb740GDgCU7sFKYUTFwEwZLT2J0IW1syJc3NRzh1MAkyqo+e/yOYpGNQ4gVZu66SzW15z12lxMjTK39h2XzqmUJ5f5EOz6CdzH1SeZjGQzx5epMSjS+voGT2QdO+zOQuain/8M99jjMeYNyJC65hKcXZ7vypv/sLLdza5LfMocobzigbOuKRA31xVFSkh2pC6fzN7+9Y1dIMNxa7ksaTkGvBqknJN660UiUtpMy+yZ7Oxifwnb0Aus0p5H2Rh1lD6A/WMGgPSKGNfPZ4Bz/2jDtyf8eWOulqa3FSsSHPChujl3ZKmqX0rvY6KQo5gFZeB2PLsC40/F1WmhLoGPKCVOsOZn3/M9Q0zgn0slTjgZvHTUq+sitFSiXNUvq3TU4SUmZmcIVyZJWc/Nh8oJKhOQW7ujcJE8kb+NgeLleNJ7GFmqPgJ1PS2SelEk1rGJRnj01OSJY9uszaHCqH75IONmKGBWgEXrXuYA7p9C60Hs7JLuAUwIXmqRfn5KtaifahwcnPJick80HM/IS0CHNUBV9MMgQV9j0EYqwzjRp2aSdQq6rGsy27e6N5XeuRcdK7giFVVPKrqe18lTyednJPvmiUMD95Jt/vaW1KqkEV51j+E3HKRaGrukIw82JwZZeNB+pTc3CiuWx/AlJKJV+oH/LbXmI9kT2edgL1wBsPaB74wHXLJA9hcgONiO8joSLxTvw6vs2JiTqvUYmm/WY/fynlGCW/m5xAhdA9k0aM5Zlkk0/lI/Nu3XcyTlxynTQeoj7YiZkU+CxsUfz586d3sJKrvvT4LO1kF+jngC9VWjUubk0JKtYi78ugKw9bLTfx+zaZlbwzZfqSFkrk56xpJ9eyqc4RTrgw1FU5gRClaDxk0GLG+T18khX40FrySf5s2slG3nbERiJPhjbGO1HWkypIyzttEi62XiuXSOkdWEsUShgnMEB4YzlQ6Cd5MvTFRod9xb2iP6kbazbygDin9W6KKKV3HiWMExgIHEWThgFmpHgWCem4dSLluFOHKFkKebehenYbKbO6xzxFCeMkgczzi40EElB4qiYP9Yhb747V6/bjKuIh+YjuxMe2llIHbycpYZxA/VUNh5uG4Hsoj2OH8jg2B2qmnZLPERygRC2lUMKf3WqthI3tyfKH95f9TZcAjYArc1qmJi5UCIMJdFNYQJA4cavJcfnmYKMdhCjlNrv6q1ByIx2aWihhnUCh2PA6mdg5kw4sIXMdxmBRpqfyeXEV9cj2vKrYV3LjUVJmOXmpswnvo0rKfiWsE2g83hP1C5fMzbJgqmo89IAZl986n7rBDMZ7qltXUh9ckDip1qrL+1oGJ3ukQKmLuZ1CSoMSbk0JCm08VItCyZNZVY4Upv1hPXPe2PUnnsL6kbmF+5f1LoB0b5RWolvshPx4KTDdlUpRRK8qJy6UwHQ6y7nr3k+HNhlNirXHHaRHD3GSummyM8FiMYg+VWva9iZx3XQ5qpce5U5W9HwiPOaoh0RKvaLyKHa0jUr4PXRqXT6yw9Cu9gPJcuPfan/QcsIwdKoSlWvUdUPJ7s/SI3q2IHVyT21+8IsQx0rpUbPdf/k1pWYlwrmCFfVhKQzS0lNDmAYXLEivvInEtO0+J/TZsUgRFx0qpY5TtI9HKBHPWuwkW2G6sYXkuS6bKC6qTnck7CIuEsWaUolf33BYcNJGirg11tC9yp1oU0cotUMNvu7A5hdUDIeKPjuc00ms1dNfiZOqCxPmSadIKXf4Pu/bLdzjxCpPNi/q0TNdhwFVbNMy2LnqVGe6CSMcMcdQpkZ9WEG3rEzXonxFNoJ3yreZ9DlqWMXV7UODk31Srn4+Pv4Udgvb1JKsAxiOCoZ0vD5fbcPIyjdLs550IM7ep8PILpOjUO8IM8Z4G5aptr7KHwuvuNNi8ueAsgjjPxMUHYw0eDtOiZJ0Ga92u2c/Ucxtkmm8263iO/mW3TxPzW5u86b6nM7Rmc3ZE8kf1HBeBbDavzjxHGqTlDekZCU7YHAU+6W8BSVpPE2SZDmqjiYdGZxQfOqr/4/kW1Ci3U+syHHqEcxqvqWRr9/7s56EWf+7bL/v1TFn4xir8cxJKx5//fkg8OOXbKf8FcI68cyXzs9rYM5MrBYnxGv/H+h6Yk4OWZr+/zKHM6VmEA7OctT87TMfbw3HDiN9uMJ2gyAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAI8l74DyLtyXfKs1/wAAAAAElFTkSuQmCC"
-                    class="h-8"
-                  />
-                </div>
-
+              <div
+                class="mt-6 flex flex-wrap justify-center lg:justify-start items-center gap-0 sm:gap-6 md:gap-10"
+              >
+                <img
+                  src="data:image/png;base64,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"
+                  class="h-6 sm:h-7 opacity-70"
+                />
                 <div class="flex items-center gap-2 opacity-70">
                   <img
                     src="https://is1-ssl.mzstatic.com/image/thumb/Purple124/v4/28/19/58/2819588a-6fb1-ce10-3df3-78f2d2853fbc/PayHere-Release-AppIcon-0-1x_U007emarketing-0-0-sRGB-85-220-8.png/1200x600wa.png"
-                    class="h-8 rounded-sm"
+                    class="h-6 sm:h-7 opacity-70"
                   />
-                  <span class="text-sm font-bold text-slate-500">payhere</span>
+                  <span class="text-xs sm:text-sm font-bold text-slate-500"
+                    >payhere</span
+                  >
                 </div>
-
-                <div class="flex items-center gap-2 opacity-70">
-                  <img
-                    src="https://www.codernocoder.com/wp-content/uploads/2021/11/20.png"
-                    class="h-8"
-                  />
-                </div>
-
-                <div class="flex items-center gap-2 opacity-70">
-                  <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg"
-                    class="h-5"
-                  />
-                </div>
+                <img
+                  src="https://www.codernocoder.com/wp-content/uploads/2021/11/20.png"
+                  class="h-6 sm:h-7 opacity-70"
+                />
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg"
+                  class="h-6 sm:h-7 opacity-70"
+                />
               </div>
             </div>
           </div>
 
           <div
-            class="relative flex items-center justify-center h-[500px] md:h-[480px] w-full z-30"
+            class="relative flex items-center justify-center h-[360px] sm:h-[420px] md:h-[500px] w-full z-30"
           >
             <div
-              class="relative w-[320px] h-[520px] bg-white rounded-[180px] overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.12)] z-30"
+              class="relative w-[200px] sm:w-[250px] md:w-[300px] lg:w-[320px] h-[350px] sm:h-[420px] md:h-[500px] lg:h-[520px] bg-white rounded-[120px] sm:rounded-[150px] md:rounded-[180px] overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.12)] z-30"
             >
               <div
-                class="absolute top-1/2 left-1/4 w-[200px] h-[200px] bg-yellow-300 rounded-full blur-3xl opacity-30 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+                class="absolute top-1/2 left-1/2 w-[160px] sm:w-[200px] h-[160px] bg-yellow-300 rounded-full blur-3xl opacity-25 -translate-x-1/2 -translate-y-1/2"
               ></div>
 
               <img
@@ -244,11 +267,7 @@
             </div>
 
             <div
-              class="absolute top-1/2 left-1/4 w-[280px] h-[240px] bg-[#F5C007] rounded-full blur-[80px] opacity-15 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-0"
-            ></div>
-
-            <div
-              class="absolute top-0 right-[0px] w-[350px] h-[520px] pointer-events-none z-20"
+              class="absolute hidden md:block top-0 right-0 w-[350px] h-[520px] pointer-events-none z-20"
             >
               <div
                 class="absolute -top-[40px] right-[130px] w-[360px] h-[580px] pointer-events-none z-20"
@@ -262,11 +281,18 @@
               </div>
             </div>
           </div>
-          `
         </section>
       </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.1/flowbite.min.js"></script>
+    <script>
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
   </body>
 </html>
