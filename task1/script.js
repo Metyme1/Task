@@ -3,18 +3,15 @@ let favoriteCount = 0;
 
 heartButtons.forEach((heart) => {
   heart.addEventListener("click", () => {
-    // Check active status
     const liked = heart.classList.contains("active");
 
     if (!liked) {
-      // Add favorite
       heart.classList.add("active");
       favoriteCount++;
       heart.setAttribute("data-fav", "true");
 
       console.log("Added to favorites", favoriteCount);
     } else {
-      // Remove favorite
       heart.classList.remove("active");
       favoriteCount--;
       heart.setAttribute("data-fav", "false");
@@ -55,6 +52,6 @@ const buyButtons = document.querySelectorAll(".buy-button");
 buyButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
     cartCount++;
-    console.log("Item added to cart (buy button)", cartCount);
+    console.log("Item added to cart", cartCount);
   });
 });

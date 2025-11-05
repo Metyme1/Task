@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bali Tour — Hero Clone</title>
 
-    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -29,44 +28,44 @@
       };
     </script>
 
-    <!-- Flowbite CSS -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.1/flowbite.min.css"
       rel="stylesheet"
     />
 
-    <!-- Google Font -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="bg-[#E9F2F6] font-poppins antialiased">
-    <div class="w-full">
-      <div class="relative bg-white overflow-hidden shadow-soft">
+    <div class="w-full flex justify-center py-10">
+      <div
+        class="relative bg-white overflow-hidden shadow-soft rounded-[40px] w-[92%] max-w-[1400px]"
+      >
         <div
-          class="hidden lg:block pointer-events-none absolute inset-y-0 right-0 w-[35%]"
+          class="hidden lg:block pointer-events-none absolute inset-y-0 right-0 w-[28%]"
         >
           <div
             class="h-[250px] w-[100%] bali-diagonal bg-[color:var(--bali-yellow)]"
           ></div>
           <div
-            class="absolute right-0 top-[220px] w-full h-[350px] bg-[color:var(--bali-cyan)] rounded-b-[250px]"
+            class="absolute right-0 top-[220px] w-full h-[300px] bg-[color:var(--bali-cyan)] rounded-b-[250px]"
+          ></div>
+          <div
+            class="absolute right-[0px] top-[310px] w-full h-[450px] bg-[color:var(--bali-cyan)] rounded-b-[250px] opacity-[0.1] blur-[2px]"
           ></div>
         </div>
 
-        <nav class="relative z-20 flex items-center justify-between px-8 py-6">
-          <!-- Logo -->
+        <nav class="relative z-20 flex items-center justify-between px-20 py-6">
           <a href="#" class="text-2xl font-extrabold text-[#14A3DD]">
             Bali Tour
           </a>
 
-          <!-- Menu Links -->
           <ul
-            class="flex items-center gap-8 text-sm text-slate-600 font-medium"
+            class="flex items-center gap-8 text-sm text-slate-600 font-medium mr-auto ml-20"
           >
             <li
               class="flex items-center gap-1 cursor-pointer hover:text-slate-900"
@@ -106,11 +105,9 @@
             <li class="hover:text-slate-900">Blog</li>
           </ul>
 
-          <!-- Right Controls -->
           <div class="flex items-center gap-4">
-            <!-- ENG Selector -->
             <div
-              class="flex items-center gap-1 text-sm cursor-pointer text-slate-600 hover:text-slate-900"
+              class="flex items-center gap-1 text-sm cursor-pointer text-slate-600 hover:text-slate-900 text-white hover:text-white"
             >
               <img src="https://flagcdn.com/w20/gb.png" class="w-4 h-4" />
               ENG
@@ -126,7 +123,6 @@
               </svg>
             </div>
 
-            <!-- Login Button -->
             <button
               class="px-5 py-2 bg-white rounded-full shadow-md flex items-center gap-2 border border-slate-200 hover:shadow-lg transition"
             >
@@ -144,7 +140,6 @@
             </button>
           </div>
 
-          <!-- Mobile Toggle -->
           <button class="md:hidden p-2">
             <svg
               class="w-6 h-6 text-slate-700"
@@ -156,10 +151,10 @@
             </svg>
           </button>
         </nav>
+
         <section
-          class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-6 items-center px-6 sm:px-10 pt-1 pb-14 md:pb-20"
+          class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-6 items-center px-14 pt-2 pb-24"
         >
-          <!-- Left -->
           <div class="py-6 md:py-10">
             <div class="relative inline-block">
               <h1
@@ -171,13 +166,11 @@
                 WITH FUN
               </h1>
 
-              <!-- Bird on ENJOY (O) -->
               <img
                 src="a1.png"
                 class="absolute -top-6 left-[90px] w-12 rotate-[-5deg] pointer-events-none"
               />
 
-              <!-- Bird on FUN (U) -->
               <img
                 src="a2.png"
                 class="absolute top-[95px] left-[160px] w-10 rotate-[4deg] pointer-events-none"
@@ -192,65 +185,81 @@
                 Buy Ticket Now
               </a>
 
-              <!-- Arrow -->
               <img
                 src="https://img.freepik.com/premium-vector/handdrawn-curved-arrow-left_850574-565.jpg"
-                class="absolute right-[-60px] top-[-20px] w-20 opacity-90 rotate-[-5deg]"
+                class="absolute left-[300px] -top-[50px] w-24 opacity-90 rotate-50deg]"
               />
             </div>
 
-            <!-- Partners -->
-            <div class="mt-24">
+            <div class="mt-20">
               <p class="text-xs tracking-widest text-slate-400">PARTNER</p>
-              <div
-                class="mt-4 grid grid-cols-4 sm:flex gap-6 sm:gap-10 items-center"
-              >
-                <img
-                  class="h-6 opacity-80"
-                  src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg"
-                />
-                <img
-                  class="h-6 opacity-80"
-                  src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg"
-                />
-                <img
-                  class="h-6 opacity-80"
-                  src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg"
-                />
-                <img
-                  class="h-6 opacity-80"
-                  src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg"
-                />
+
+              <div class="mt-6 flex items-center gap-14">
+                <div class="flex items-center gap-2 opacity-70">
+                  <img
+                    src="data:image/png;base64,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"
+                    class="h-8"
+                  />
+                </div>
+
+                <div class="flex items-center gap-2 opacity-70">
+                  <img
+                    src="https://is1-ssl.mzstatic.com/image/thumb/Purple124/v4/28/19/58/2819588a-6fb1-ce10-3df3-78f2d2853fbc/PayHere-Release-AppIcon-0-1x_U007emarketing-0-0-sRGB-85-220-8.png/1200x600wa.png"
+                    class="h-8 rounded-sm"
+                  />
+                  <span class="text-sm font-bold text-slate-500">payhere</span>
+                </div>
+
+                <div class="flex items-center gap-2 opacity-70">
+                  <img
+                    src="https://www.codernocoder.com/wp-content/uploads/2021/11/20.png"
+                    class="h-8"
+                  />
+                </div>
+
+                <div class="flex items-center gap-2 opacity-70">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg"
+                    class="h-5"
+                  />
+                </div>
               </div>
             </div>
           </div>
 
           <div
-            class="relative flex items-center justify-center h-[600px] w-full z-30"
+            class="relative flex items-center justify-center h-[500px] md:h-[480px] w-full z-30"
           >
-            <!-- OVAL IMAGE -->
             <div
-              class="relative w-[320px] h-[520px] bg-white rounded-[180px] overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.12)] z-30 -translate-x-10"
+              class="relative w-[320px] h-[520px] bg-white rounded-[180px] overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.12)] z-30"
             >
+              <div
+                class="absolute top-1/2 left-1/4 w-[200px] h-[200px] bg-yellow-300 rounded-full blur-3xl opacity-30 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+              ></div>
+
               <img
                 src="https://lushtoblush.com/wp-content/uploads/2025/05/IMG_6952.jpg"
                 class="w-full h-full object-cover"
               />
             </div>
 
-            <!-- MIXED BORDER -->
             <div
-              class="absolute top-4 -right-8 w-[300px] h-[500px] rounded-[180px] z-20 -translate-x-20 pointer-events-none"
-            >
-              <!-- Solid top-left -->
-              <div
-                class="absolute inset-[6px] border-[3px] border-yellow-400 rounded-[180px] border-r-0 border-b-0 opacity-80"
-              ></div>
+              class="absolute top-1/2 left-1/4 w-[280px] h-[240px] bg-[#F5C007] rounded-full blur-[80px] opacity-15 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-0"
+            ></div>
 
-              <!-- Dashed bottom-right -->
+            <div
+              class="absolute top-0 right-[0px] w-[350px] h-[520px] pointer-events-none z-20"
+            >
               <div
-                class="absolute inset-[6px] border-[3px] border-dashed border-yellow-400 rounded-[180px] border-l-0 border-t-0 opacity-60"
-              ></div>
+                class="absolute -top-[40px] right-[130px] w-[360px] h-[580px] pointer-events-none z-20"
+              >
+                <div
+                  class="absolute inset-[10px] border-[1px] border-white rounded-[200px] border-r-0 border-b-0 opacity-80"
+                ></div>
+                <div
+                  class="absolute inset-[10px] border-[1px] border-dashed border-white rounded-[200px] border-l-0 border-t-0 opacity-60"
+                ></div>
+              </div>
             </div>
           </div>
           `
@@ -258,7 +267,6 @@
       </div>
     </div>
 
-    <!-- Flowbite JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.1/flowbite.min.js"></script>
   </body>
 </html>

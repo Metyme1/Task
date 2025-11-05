@@ -1,4 +1,3 @@
-// highlight category on click
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains("pill")) {
     document.querySelector(".pill.active")?.classList.remove("active");

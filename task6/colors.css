@@ -1,23 +1,18 @@
 :root {
-  /* PAPER */
   --paper-light: #ffffff;
   --paper-dark: #424242;
 
-  /* DEFAULT BG */
   --default-light: #fafafa;
   --default-dark: #303030;
 
-  /* PRIMARY COLORS */
   --primary-main: #9c27b0;
   --primary-light: #e1bee7;
   --primary-dark: #6a1b9a;
 
-  /* SECONDARY COLORS */
   --secondary-main: #8bc34a;
   --secondary-light: #dcedc8;
   --secondary-dark: #558b2f;
 
-  /* TEXT */
   --text-primary: rgba(0, 0, 0, 0.87);
   --text-secondary: rgba(0, 0, 0, 0.54);
   --text-secondary-dark-mode: rgba(255, 255, 255, 0.7);

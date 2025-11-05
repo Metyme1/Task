@@ -22,7 +22,6 @@
   cursor: pointer;
 }
 
-/* Thumb */
 .price-box input[type="range"]::-webkit-slider-thumb {
   appearance: none;
   height: 18px;
@@ -162,14 +161,13 @@
 @media (max-width: 900px) {
   .sidebar {
     width: 100%;
-    position: static; /* don't stick on mobile */
+    position: static;
     padding: 12px;
     border-radius: 14px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03);
     gap: 14px;
   }
 
-  /* Stack boxes horizontally with scroll */
   .price-box,
   .rating-box,
   .brand-box,
@@ -186,7 +184,6 @@
     scrollbar-width: none;
   }
 
-  /* Hide scrollbar visually */
   .sidebar::-webkit-scrollbar {
     display: none;
   }
@@ -204,7 +201,6 @@
     padding: 4px 10px;
   }
 
-  /* Make checkboxes inline wrap */
   .brand-box label {
     font-size: 11px;
     margin: 4px 0;

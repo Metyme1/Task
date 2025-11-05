@@ -2,15 +2,13 @@ let posts = [];
 let currentPage = 1;
 const perPage = 10;
 
-// Fetch posts
 fetch("https://jsonplaceholder.typicode.com/posts")
   .then((res) => res.json())
   .then((data) => {
-    posts = data.slice(0, 20); // Only 20
+    posts = data.slice(0, 20);
     renderCards();
   });
 
-// Create Card-One HTML
 function createCard(post) {
   const imgURL = "shoe.png";
 
@@ -52,7 +50,6 @@ function renderCards() {
   ).textContent = `${currentPage} / ${Math.ceil(posts.length / perPage)}`;
 }
 
-// Buttons
 document.getElementById("nextBtn").addEventListener("click", () => {
   if (currentPage < 2) {
     currentPage++;

@@ -147,7 +147,6 @@
   transform: scale(0.92);
 }
 
-/* Mobile adjustments for card UI styling */
 @media (max-width: 500px) {
   .product-image {
     height: 160px;
@@ -173,21 +172,18 @@
   }
 }
 
-/* Medium screens (Tablets & small laptops) */
 @media (max-width: 1024px) {
   #cards {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-/* Tablets & large phones */
 @media (max-width: 768px) {
   #cards {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Phones (portrait) */
 @media (max-width: 600px) {
   #cards {
     grid-template-columns: repeat(2, 1fr);
@@ -200,21 +196,18 @@
   }
 }
 
-/* Very small screens */
 @media (max-width: 380px) {
   #cards {
     grid-template-columns: 1fr;
   }
 }
 
-/* Tablets */
 @media (max-width: 900px) {
   #cards {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Small phones */
 @media (max-width: 600px) {
   #cards {
     grid-template-columns: repeat(2, 1fr);
@@ -226,7 +219,6 @@
   }
 }
 
-/* Very small screens */
 @media (max-width: 360px) {
   #cards {
     grid-template-columns: 1fr;

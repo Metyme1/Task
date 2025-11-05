@@ -3,22 +3,20 @@ let favoriteCount = 0;
 
 heartButtons.forEach((heart) => {
   heart.addEventListener("click", () => {
-    const liked = heart.getAttribute("data-fav") === "true";
+    const liked = heart.classList.contains("active");
 
     if (!liked) {
       heart.classList.add("active");
-      heart.setAttribute("data-fav", "true");
-      heart.textContent = "❤️";
       favoriteCount++;
+      heart.setAttribute("data-fav", "true");
 
-      console.log("Added to favorites");
+      console.log("Added to favorites", favoriteCount);
     } else {
       heart.classList.remove("active");
-      heart.setAttribute("data-fav", "false");
-      heart.textContent = "❤";
       favoriteCount--;
+      heart.setAttribute("data-fav", "false");
 
-      console.log("Removed from favorites");
+      console.log("Removed from favorites", favoriteCount);
     }
   });
 });

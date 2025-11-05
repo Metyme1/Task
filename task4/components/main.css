@@ -61,7 +61,6 @@ body {
   justify-content: flex-start;
 }
 
-/* Sidebar stays fixed width */
 #sidebar {
   width: 280px;
   flex-shrink: 0;
@@ -105,25 +104,22 @@ body {
   transform: translateY(-3px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
-.t4-card:hover .product-description {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 85%;
-  transform: translate(-50%, -50%);
-  height: auto;
-  -webkit-line-clamp: unset;
-  background: #fff;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-  z-index: 99;
-  overflow-y: auto;
-  max-height: 200px;
+
+.star-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.overlay-title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 6px;
 }
 .hover-overlay {
   position: absolute;
-  inset: 0; /* full stretch */
+  inset: 0;
   background: linear-gradient(
     180deg,
     #0c1014 0%,
@@ -173,8 +169,11 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+.no-overlay {
+  position: relative;
+  z-index: 200;
+}
 
-/* ------------------ RESPONSIVE ------------------ */
 @media (max-width: 980px) {
   .layout {
     flex-direction: column;

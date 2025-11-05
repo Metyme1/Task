@@ -2,16 +2,13 @@ body {
   font-family: "Poppins", sans-serif;
   background: #ebebeb;
   display: flex;
-  flex-direction: column; /* stack them vertically */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 40px; /* space between cards */
+  gap: 40px;
   min-height: 100vh;
 }
 
-/* REMOVE old .product-container flex rules COMPLETELY */
-
-/* Shared card style */
 .product-card {
   width: 100%;
   max-width: 300px;
@@ -29,7 +26,6 @@ body {
   right: 20px;
 }
 
-/* Shared Heart Style */
 .heart-icon {
   width: 32px;
   height: 32px;
@@ -47,7 +43,7 @@ body {
 .heart-icon i::before {
   content: "\2665";
   color: #ff3b5c;
-  font-size: 18px;
+  font-size: 24px;
 }
 
 .title-row {
@@ -88,7 +84,6 @@ body {
   justify-content: center;
 }
 
-/* ✅ Floating cart anchored to clipped wrapper */
 .product-container-2 .floating-cart {
   position: absolute;
   bottom: -22px;
@@ -110,10 +105,9 @@ body {
   gap: 30px;
   justify-content: center;
   align-items: flex-start;
-  flex-wrap: wrap; /* ← important */
+  flex-wrap: wrap;
 }
 
-/* Default desktop sizes */
 .product-title {
   font-size: 20px;
   font-weight: 600;
@@ -130,24 +124,24 @@ body {
 }
 @media (max-width: 768px) {
   .product-card {
-    max-width: 90%; /* Make cards slightly narrower on mobile */
+    max-width: 90%;
   }
 
   .product-title {
-    font-size: 18px; /* Adjust font size */
+    font-size: 18px;
   }
 
   .product-price {
-    font-size: 16px; /* Adjust font size */
+    font-size: 16px;
   }
 
   .floating-cart {
-    right: -15px; /* Adjust position */
-    bottom: -15px; /* Adjust position */
+    right: -15px;
+    bottom: -15px;
   }
 
   .cards-row {
-    flex-direction: column; /* Stack cards vertically */
-    align-items: center; /* Center cards */
+    flex-direction: column;
+    align-items: center;
   }
 }

@@ -1,4 +1,3 @@
-// toggle delivery active
 document.querySelectorAll(".delivery-options button").forEach((btn) => {
   btn.addEventListener("click", () => {
     document
@@ -8,7 +7,6 @@ document.querySelectorAll(".delivery-options button").forEach((btn) => {
   });
 });
 
-// reset buttons (demo only)
 document.querySelectorAll(".reset").forEach((r) => {
   r.addEventListener("click", () => {
     alert("Filters reset");

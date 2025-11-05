@@ -112,14 +112,12 @@ body {
   transform: scale(0.92);
 }
 
-/* special second card shape */
 .second-style {
   border-bottom-right-radius: 70px;
   position: relative;
   padding-bottom: 50px;
 }
 
-/* floating circle button */
 .floating-cart {
   position: absolute;
   right: -25px;
@@ -137,7 +135,6 @@ body {
   transition: 0.2s ease;
 }
 
-/* hover effect */
 .floating-cart:hover {
   transform: scale(1.07);
 }

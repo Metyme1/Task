@@ -3,13 +3,11 @@
   --bali-cyan: #05a9d6;
 }
 
-/* Outline stroke text */
 .bali-outline {
   color: transparent;
   -webkit-text-stroke: 2px #0f172a;
 }
 
-/* Yellow diagonal stripes */
 .bali-diagonal {
   background-image: repeating-linear-gradient(
     135deg,

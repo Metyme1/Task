@@ -11,18 +11,15 @@ if (closeModalBtn && successModal) {
 
 heartButtons.forEach((heart) => {
   heart.addEventListener("click", () => {
-    // Check active status
     const liked = heart.classList.contains("active");
 
     if (!liked) {
-      // Add favorite
       heart.classList.add("active");
       favoriteCount++;
       heart.setAttribute("data-fav", "true");
 
       console.log("Added to favorites", favoriteCount);
     } else {
-      // Remove favorite
       heart.classList.remove("active");
       favoriteCount--;
       heart.setAttribute("data-fav", "false");

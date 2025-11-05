@@ -5,7 +5,7 @@ const perPage = 10;
 fetch("https://jsonplaceholder.typicode.com/posts")
   .then((res) => res.json())
   .then((data) => {
-    posts = data.slice(0, 20); // only first 20
+    posts = data.slice(0, 20);
     renderCards();
   });
 
@@ -44,7 +44,7 @@ function cardTemplate(item) {
         <p class="product-title">${item.title.slice(0, 22)}...</p>
         <p class="product-description">${item.body}</p>
 
-        <div class="bottom-row">
+        <div class="bottom-row no-overlay">
           <span class="product-price">$${(Math.random() * 200 + 20).toFixed(
             2
           )}</span>
@@ -52,17 +52,16 @@ function cardTemplate(item) {
         </div>
       </div>
 
-      <!-- ✅ HOVER OVERLAY -->
+      
       <div class="hover-overlay">
         <h3>${item.title}</h3>
         <span class="rating">⭐️⭐️⭐️⭐️☆</span>
         <p>${item.body}</p>
-        <span class="price-tag">$${(Math.random() * 200 + 20).toFixed(2)}</span>
+      
       </div>
   </div>`;
 }
 
-// pagination buttons
 document.getElementById("nextBtn").addEventListener("click", () => {
   if (currentPage < 2) {
     currentPage++;
