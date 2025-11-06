@@ -1,49 +1,62 @@
-<section class="bg-white py-24 relative overflow-hidden">
-  <div class="absolute top-12 left-16 text-[#FF9800] text-4xl font-extrabold">
+<section class="relative overflow-hidden py-16 sm:py-20 md:py-24 bg-white">
+  <div
+    class="absolute right-0 top-1/2 w-[600px] sm:w-[700px] md:w-[900px] h-[450px] md:h-[600px] bg-[#F5E7FF] opacity-70 rounded-[55%] blur-[90px]"
+    style="transform: translate(40%, -40%) rotate(-10deg)"
+  ></div>
+
+  <div
+    class="absolute top-6 sm:top-10 left-6 sm:left-8 text-[#FF9800] text-2xl sm:text-3xl md:text-4xl font-extrabold"
+  >
     +
   </div>
-
-  <div class="absolute bottom-20 right-20 text-[#4CAF50] text-4xl font-bold">
-    ●
-  </div>
-
-  <div class="absolute bottom-24 left-56 text-[#9C27B0] text-3xl font-bold">
+  <div
+    class="absolute bottom-16 left-8 sm:left-12 text-[#9C27B0] text-xl sm:text-2xl md:text-3xl font-bold"
+  >
     ~
   </div>
+  <div
+    class="absolute top-28 sm:top-36 right-10 md:right-40 w-6 sm:w-8 md:w-10 h-6 sm:h-8 md:h-10 border-[3px] sm:border-4 border-[#52C41A] rounded-full opacity-90"
+  ></div>
 
-  <div class="max-w-6xl mx-auto px-16 grid grid-cols-2 gap-12 items-center">
-    <div class="relative">
+  <div
+    class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center px-6 sm:px-8 md:px-12"
+  >
+    <div class="relative flex justify-center md:justify-start mb-8 md:mb-0">
       <img
         src="2.png"
-        class="w-[480px] rounded-xl drop-shadow-[0_10px_20px_rgba(0,0,0,0.15)]"
+        class="w-[260px] sm:w-[340px] md:w-[460px] lg:w-[500px] rounded-xl drop-shadow-[0_25px_45px_rgba(0,0,0,0.15)]"
       />
 
       <img
-        src="chart.png"
-        class="absolute -bottom-10 -left-6 w-[320px] rounded-xl drop-shadow-[0_10px_20px_rgba(0,0,0,0.1)]"
+        src="2.png"
+        class="absolute bottom-[-20px] left-2 w-[160px] sm:w-[220px] md:w-[260px] lg:w-[300px] rounded-xl drop-shadow-[0_18px_40px_rgba(0,0,0,0.18)]"
       />
     </div>
 
-    <div>
-      <h2 class="text-4xl font-bold mb-4 text-gray-800">
-        Vivamus sit <br />
-        amet <span class="text-black font-extrabold">interdum</span>
+    <div class="space-y-5 md:space-y-6 text-center md:text-left">
+      <h2
+        class="font-semibold text-gray-800 leading-tight text-3xl sm:text-4xl md:text-[42px]"
+      >
+        Vivamus sit amet
+        <span class="font-bold text-black block sm:inline">interdum</span>
       </h2>
 
-      <p class="text-gray-600 mb-6 leading-relaxed">
+      <div
+        class="w-14 sm:w-16 h-[3px] bg-[#A83BDF] rounded-full mx-auto md:mx-0"
+      ></div>
+
+      <p
+        class="text-gray-600 leading-relaxed max-w-md mx-auto md:mx-0 text-sm sm:text-base"
+      >
         Vivamus et luctus mauris. Maecenas nisl libero, tincidunt id odio id,
         feugiat vulputate quam.
       </p>
 
       <button
-        class="bg-[#9C27B0] px-8 py-3 rounded-full text-white font-medium shadow-lg hover:scale-105 hover:shadow-xl transition"
+        class="bg-[#A83BDF] px-6 sm:px-8 py-2.5 rounded-full text-white font-medium shadow-md hover:bg-[#9C27B0] transition-all duration-200 mx-auto md:mx-0"
       >
         SEE DETAIL
       </button>
     </div>
-
-    <div
-      class="absolute bottom-[500px] left-0 w-[900px] h-[400px] bg-[#E9D6FF] opacity-40 blur-[100px] rounded-full"
-    ></div>
   </div>
 </section>
