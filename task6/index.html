@@ -30,7 +30,19 @@
         .then((response) => response.text())
         .then((data) => {
           document.getElementById("navbar").innerHTML = data;
-        });
+
+          const btn = document.getElementById("menuBtn");
+          const menu = document.getElementById("mobileMenu");
+          const closeBtn = document.getElementById("closeMenu");
+
+          btn.addEventListener("click", () => {
+            menu.classList.remove("hidden");
+          });
+
+          closeBtn.addEventListener("click", () => {
+            menu.classList.add("hidden");
+          });
+        }); // ✅ closes .then()
     </script>
   </head>
 

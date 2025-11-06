@@ -1,5 +1,5 @@
 <nav
-  class="flex justify-between items-center px-20 py-6 absolute top-0 left-0 w-full z-20 backdrop-blur-sm bg-white/0"
+  class="flex justify-between items-center px-6 sm:px-10 md:px-16 lg:px-20 py-6 absolute top-0 left-0 w-full z-20 backdrop-blur-sm bg-white/0"
 >
   <div class="flex items-center space-x-2">
     <div
@@ -14,7 +14,7 @@
     </span>
   </div>
 
-  <ul class="flex space-x-10 text-white font-medium">
+  <ul class="hidden md:flex space-x-10 text-white font-medium">
     <li class="relative cursor-pointer hover:text-[#E1BEE7] transition group">
       Feature
       <div
@@ -30,7 +30,7 @@
     <li class="cursor-pointer hover:text-[#E1BEE7] transition">Contact</li>
   </ul>
 
-  <div class="flex items-center space-x-4">
+  <div class="hidden md:flex items-center space-x-4">
     <button class="text-white font-medium hover:opacity-80 tracking-wide">
       SIGN IN
     </button>
@@ -47,4 +47,24 @@
       ⚙️
     </button>
   </div>
+  <button id="menuBtn" class="md:hidden text-white text-2xl">☰</button>
 </nav>
+<div
+  id="mobileMenu"
+  class="fixed top-0 right-0 w-2/3 h-[70vh] bg-[#7A1FA2]/95 backdrop-blur-lg text-white pt-28 px-8 space-y-6 text-lg hidden z-50 rounded-bl-3xl shadow-2xl"
+>
+  <button id="closeMenu" class="absolute top-6 right-6 text-white text-3xl">
+    ✕
+  </button>
+
+  <div class="flex flex-col space-y-6">
+    <a href="#">Feature</a>
+    <a href="#">Pricing</a>
+    <a href="#">News & Event</a>
+    <a href="#">Contact</a>
+
+    <button class="bg-[#8BC34A] rounded-full px-6 py-2 w-fit font-semibold">
+      Register
+    </button>
+  </div>
+</div>
