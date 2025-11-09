@@ -264,3 +264,13 @@ body {
     bottom: 35px;
   }
 }
+
+.dark-mode .product-card {
+  border: 1px solid rgba(85, 85, 85, 0.2);
+}
+
+.dark-mode .product-container-2,
+.dark-mode .product-container-1 {
+  border: 1px solid rgba(85, 85, 85, 0.2);
+  border-radius: 28px;
+}

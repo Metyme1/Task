@@ -4,11 +4,17 @@ document.addEventListener("click", (e) => {
     e.target.classList.add("active");
   }
 });
-document.addEventListener("DOMContentLoaded", () => {
-  const hamburger = document.querySelector(".hamburger");
-  const menu = document.querySelector(".mobile-menu");
+function toggleMenu() {
+  const dropdown = document.getElementById("dropdown-menu");
+  dropdown.style.display =
+    dropdown.style.display === "block" ? "none" : "block";
+}
 
-  hamburger.addEventListener("click", () => {
-    menu.classList.toggle("show");
-  });
+document.addEventListener("click", (e) => {
+  const dropdown = document.getElementById("dropdown-menu");
+  const hamburger = document.querySelector(".hamburger");
+
+  if (!dropdown.contains(e.target) && !hamburger.contains(e.target)) {
+    dropdown.style.display = "none";
+  }
 });
